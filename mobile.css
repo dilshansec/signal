@@ -1,0 +1,218 @@
+/* ==========================================================================
+   UAP World Monitor - Mobile & Tablet Responsive Stylesheet (mobile.css)
+   ========================================================================== */
+
+/* ── 1. TABLET & LAPTOP ADAPTATION (max-width: 1024px) ──────────────────── */
+@media (max-width: 1024px) {
+  .left-panel {
+    width: 240px;
+    min-width: 240px;
+  }
+  .right-gallery-panel {
+    width: 240px;
+    min-width: 240px;
+  }
+}
+
+/* ── 2. MOBILE SCREEN ADAPTATION (max-width: 850px) ──────────────────────── */
+@media (max-width: 850px) {
+  body {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Top Bar Adaptation */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .topbar-title {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .topbar-status {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  /* Main Layout Stacking & Smooth Scroll */
+  .main {
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Center Map Container */
+  .map-area {
+    width: 100%;
+    height: 380px;
+    min-height: 350px;
+    flex-shrink: 0;
+    position: relative;
+    border-bottom: 1px solid #1c2e3d;
+  }
+
+  svg#world-map {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Hide upper-middle see more button on mobile */
+  #btn-upper-see-more,
+  .upper-see-more-btn {
+    display: none !important;
+  }
+
+  /* Map Controls for Touch Screen */
+  .zoom-controls {
+    top: 10px;
+    left: 10px;
+    gap: 4px;
+  }
+
+  .zoom-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+
+  .zoom-level {
+    top: 10px;
+    left: 54px;
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .legend {
+    bottom: 24px;
+    right: 10px;
+    font-size: 9px;
+    padding: 4px 8px;
+    gap: 8px;
+  }
+
+  .coords {
+    bottom: 6px;
+    left: 10px;
+    font-size: 9px;
+  }
+
+  /* Left Panel (Incident Log) */
+  .left-panel {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-height: 360px;
+    border-right: none;
+    border-bottom: 1px solid #1c2e3d;
+    flex-shrink: 0;
+  }
+
+  .incident-list {
+    max-height: 260px;
+  }
+
+  .inc-name {
+    font-size: 13px;
+  }
+
+  .inc-desc {
+    display: block !important;
+    font-size: 11px;
+  }
+
+  /* Right Panel (Media Gallery) */
+  .right-gallery-panel {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 380px;
+    border-left: none;
+    border-bottom: 1px solid #1c2e3d;
+    flex-shrink: 0;
+  }
+
+  .carousel-viewport {
+    height: 280px;
+  }
+
+  /* Incident Detail Modal Popup */
+  .incident-modal {
+    padding: 10px;
+  }
+
+  .modal-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 90vh !important;
+    padding: 16px !important;
+    overflow-y: auto !important;
+  }
+
+  .modal-body-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .modal-title-tactical {
+    font-size: 11px !important;
+    word-break: break-all;
+  }
+
+  .modal-img-container {
+    min-height: 220px !important;
+    max-height: 280px !important;
+  }
+
+  .modal-img-tactical {
+    max-height: 280px !important;
+  }
+
+  /* Timeline Modal Popup */
+  .timeline-box {
+    width: 96% !important;
+    max-height: 90vh !important;
+    padding: 12px !important;
+  }
+
+  .timeline-box-title {
+    font-size: 11px !important;
+  }
+}
+
+/* ── 3. SMALL MOBILE SCREENS (max-width: 480px) ─────────────────────────── */
+@media (max-width: 480px) {
+  .topbar-title {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .map-area {
+    height: 320px;
+  }
+
+  .left-panel {
+    max-height: 320px;
+  }
+
+  .right-gallery-panel {
+    height: 340px;
+  }
+
+  .carousel-viewport {
+    height: 240px;
+  }
+}
